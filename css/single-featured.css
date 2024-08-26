@@ -1,0 +1,57 @@
+/*This page belongs to both about and contact pages*/
+
+
+/*single featured component styles*/
+/*this is common styles for both about page and contact page*/
+.single-featred-container{
+    width: 100%;
+}
+.single-featured-container .single-featured-image{
+    width: 100%;
+    aspect-ratio: 355/300;
+    overflow: hidden;
+    border-radius: var(--radius);
+}
+.single-featured-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius);
+}
+.single-featured-text-component .about-info{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.single-featured-text-component .about-info p{
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+@media screen and (min-width:992px) {
+    .single-featured{
+        /* display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px; */
+        display: flex;
+        justify-content:space-between ;
+        align-items: center;
+    }
+    .single-featured-container.reverse-content .single-featured{
+        flex-direction: row-reverse;
+    }
+    .single-featured-image, .single-featured-text-component{
+        flex: 0 0 calc(50% - 30px);
+    }
+    .single-featured-container .single-featured-image{
+        aspect-ratio: 625/550;
+    }
+}
+/*this is for only contact page (form)*/
+.single-featured-text-component .contact-us-form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+    /* align-items: flex-start; */
+}
